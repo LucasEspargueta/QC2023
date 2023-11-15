@@ -18,14 +18,19 @@ def distance(x1,x2,y1,y2,z1,z2):
     return d
 
 # assume que se uma posição está presente, as outras também estarão. ex: se y está presente então x e z também deverão estar, funciona para a vx, vy e vz
+
+# tens uma string e ele vai-te buscar blocos de tamanho col_size e transforma esse bloco num float. 
+# O primeiro bloco começa no caractere com indíce start_index
 def get_gro_positions(line, start_index, col_size):
     
     positions = []
     # vai do inicio ao fim-1 em incrementos de coluna a coluna
     # -1 por causa do \n
+    # este for vai parar quando tiver 6 valores adicionados, pode para antes caso não existam vx, vy e vz
     for i in range(start_index, len(line)-1, col_size):
         positions.append(float(line[i:i+col_size]))
     
+    # while loop vai preencher com None caso não existam vx, vy e vz
     while (len(positions)) < 6:
         positions.append(None)
     
