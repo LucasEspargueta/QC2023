@@ -37,14 +37,12 @@ def get_gro_positions(line, start_index, col_size):
     
     return positions
 
-
-# separa a linha em diferentes "pedaços" que são a informação útil
-
 # residue number (5 positions, integer)
 # residue name (5 characters)
 # atom name (5 characters)
 # atom number (5 positions, integer)
 # position (in nm, x y z in 3 columns, each 8 positions with 3 decimal places)
+# separa a linha em diferentes "pedaços" que são a informação útil
 def parse_gro_line(line):
     residue_number = int(line[:5])
     residue_name = line[5:10].strip()
@@ -181,7 +179,6 @@ mol_rel_df = original_df.loc[original_df['residue_name'].str.contains(options)]
 
 user_dist = float(input('Distância para a condição, em nm: '))
 
-
 selected_mols = pd.DataFrame(columns=original_df.columns)
 
 for (mol_name, atom_name) in important_info:
@@ -218,7 +215,6 @@ for (mol_name, atom_name) in important_info:
         # Se a distância do átomo da molécula for menor que user_dist então adicionamos
         # a informação da molécula a selected_mols
         selected_mols = pd.concat([selected_mols, mol_rows])       
-
 
 final_df = pd.concat([selected_mols, sup_df])
 
