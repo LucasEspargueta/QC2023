@@ -15,12 +15,13 @@ def get_min_distance(x, y, z, sup):
 def distance(x1,x2,y1,y2,z1,z2):
     # Calcula a distância entre dois pontos
     d = math.sqrt((x1-x2)**2+(y1-y2)**2+(z1-z2)**2)
+
     return d
 
-# assume que se uma posição está presente, as outras também estarão. ex: se y está presente então x e z também deverão estar, funciona para a vx, vy e vz
+# assume que se uma posição está presente, as outras também estarão. ex: se y está presente então x e z também deverão estar, 
+# funciona para a vx, vy e vz
 
-# tens uma string e ele vai-te buscar blocos de tamanho col_size e transforma esse bloco num float. 
-# O primeiro bloco começa no caractere com indíce start_index
+# vai à string e vai buscar blocos de tamanho col_size, começando no caractere com indíce start_index, transforma esse bloco num float
 def get_gro_positions(line, start_index, col_size):
     
     positions = []
@@ -49,6 +50,7 @@ def parse_gro_line(line):
     residue_name = line[5:10].strip()
     atom_name = line[10:15].strip()
     atom_number = int(line[15:20])
+    # começa no caractér 20 pois apenas queremos as posições
     positions = get_gro_positions(line, 20, 8)
 
     return [residue_number, residue_name, atom_name, atom_number] + positions
@@ -89,6 +91,7 @@ def format_int(num, spaces):
 # garante que cada elemento (x, y, z, vx, vy, vz) tem 8 caractéres e 3 casas decimais. tipico do ficheiro .gro
 def format_float(num, spaces, decimals):
     num = round(num, decimals)
+    
     return format_str("{:.{}f}".format(num, decimals), spaces)
 
 # escreve as informações para a lista parts passando pelas funções format_int, format_str e format_float, de modo a que o ficheiro .gro seja escrito corretamente
