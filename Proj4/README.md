@@ -10,11 +10,11 @@
 <p>&nbsp;</p>
 
 ### Input file showing the system to be studied
-![original.png](/assets/original.bmp "Original .gro file")
+![original.bmp](/assets/original.bmp "Original .gro file")
 
 <p>&nbsp;</p>
 
 ### Output file showing the adsorved molecules and the surface
-![adsorved.png](/assets/adsorved.bmp "Adsorved .gro file")
+![adsorved.bmp](/assets/adsorved.bmp "Adsorved .gro file")
 
 Note: If you are running this code in a Windows machine, you'll probably need to convert the .gro files (both input and output) to a Unix format so it can be visualized in VMD. I recommend using [dos2unix](https://dos2unix.sourceforge.io/) for that, it requires no installation and it's very easy to use.
