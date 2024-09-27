@@ -2,9 +2,9 @@
 
 ## Authors: João Mendes
 
-### Adsorved Ions
+### Adsorbed Ions
 
-##### [This](https://github.com/LucasEspargueta/QC2023/blob/main/Proj4/main.py) small piece of code  will give you the particles that are adsorved in a surface. For that, the user has to provide a .gro file (an [example](https://github.com/LucasEspargueta/QC2023/blob/main/Proj4/Cell_FAP50_12.00_0.gro) is available), the molecules that are to be studied along with their central atoms, then a surface name must be provided along with the distance for the adsorption criteria. The output will be a .gro file with the adsorved particles and the surface.
+##### [This](https://github.com/LucasEspargueta/QC2023/blob/main/Proj4/main.py) small piece of code  will give you the particles that are adsorbed in a surface. For that, the user has to provide a .gro file (an [example](https://github.com/LucasEspargueta/QC2023/blob/main/Proj4/Cell_FAP50_12.00_0.gro) is available), the molecules that are to be studied along with their central atoms, then a surface name must be provided along with the distance for the adsorption criteria. The output will be a .gro file with the adsorbed particles and the surface.
 
 
 <p>&nbsp;</p>
@@ -15,7 +15,7 @@
 
 <p>&nbsp;</p>
 
-### Output file showing the adsorved molecules and the surface
+### Output file showing the adsorbed molecules and the surface
 
 ![adsorved.bmp](./assets/adsorved.bmp "Adsorved .gro file")
 
